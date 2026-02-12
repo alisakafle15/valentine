@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Valentine ❤️</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffd6e0, #fff);
+      text-align: center;
+      padding: 30px;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1, h2 {
+      color: #c2185b;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .next {
+      background-color: #e91e63;
+      color: white;
+    }
+
+    .yes {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .no {
+      background-color: #aaa;
+      color: white;
+      position: absolute;
+    }
+
+    img {
+      width: 180px;
+      border-radius: 15px;
+      margin: 8px;
+    }
+
+    .letter {
+      max-width: 700px;
+      margin: auto;
+      text-align: left;
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .letter img {
+      display: block;
+      margin: 20px auto 0 auto;
+      width: 250px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- PAGE 1: Greeting -->
+<div class="page active" id="page1">
+  <h1>Happy Valentine’s Day ❤️</h1>
+  <p>To my husband, my best friend, my forever love.  
+     This little journey is just for you.</p>
+  <button class="next" onclick="nextPage(2)">Next ➡️</button>
+</div>
+
+<!-- PAGE 2: Memories -->
+<div class="page" id="page2">
+  <h2>Look how far we have come💕</h2>
+
+  <img src="img1.jpg">
+  <img src="img2.jpg">
+  <img src="img3.jpeg">
+  <img src="img4.jpeg">
+  <img src="img5.jpeg">
+  <img src="img6.jpeg">
+  <img src="img7.jpeg">
+  <img src="img8.jpeg">
+<img src="img9.jpeg">
+
+
+  <br>
+  <button class="next" onclick="nextPage(3)">Next ➡️</button>
+</div>
+
+<!-- PAGE 3: Letter -->
+<div class="page" id="page3">
+  <h2>A Letter From My Heart 💌</h2>
+
+  <div class="letter">
+    <p><strong>To my beloved husband, my forever Valentine 💋❤️</strong></p>
+
+    <p>
+      I want to start by telling you how much I admire you. You are so hardworking, loving, and kind, and I am so proud of everything you do. I always wish I could help you more and be there for you in every way, but right now, I may not be able to. Even so, I promise that I will do my best to balance everything in life, and together we will build a beautiful, happy, and successful future 💖✨.
+    </p>
+
+    <p>
+      Sometimes, I may feel bad, misbehave, or feel like you are ignoring me 😔💞. It’s only because I love you so much and I only have you. I think it’s fair for me to feel a little angry or upset at times, because I care about us and our relationship 💕. Even in those moments, my love for you never changes ❤️.
+    </p>
+
+    <p>
+      I know we don’t have much personal time together. You're busy in work, I'm busy in study and we do not get enough time to spend together and it create problems sometimes😄💖. But I am hopeful that soon we will have more time for each other, and together we will live the perfect life we dream of 💫💞.
+    </p>
+
+    <p>
+      You make me laugh 😄, you make me feel loved ❤️, and sometimes you make me a little frustrated beacause you boycutt me frequently 😅… but even when I feel ignored, I know deep down that at the end of the day, you need me, and I need you too 💕.And I'm hopeful that you'll never make me feel alone or leftout from now on.💖💞. Otherwise I'll do tit for tat and I know you cannot handle it😅.
+    </p>
+
+    <p>
+     Apart from everything, I love you endlessly ❤️❤️. Together, we will make everything work, achieve every dream, and one day look back feeling proud of ourselves—for the love we shared, the life we built, and the happiness we created 💫💖. You and I, hand in hand, can make our story the most beautiful one 💕✨.
+    </p>
+
+    <p>
+      Forever,<br>
+      Your wife 💖
+    </p>
+
+    <!-- Husband's cute image -->
+    <img src="img10.jpeg" alt="My love">
+  </div>
+
+  <button class="next" onclick="nextPage(4)">Next ➡️</button>
+</div>
+
+<!-- PAGE 4: Valentine Proposal -->
+<div class="page" id="page4">
+  <h2>Will You Be My Valentine? ❤️ You can try saying no😜 </h2>
+
+  <button class="yes" onclick="openVideo()">YES 💍</button>
+  <button class="no" onmouseover="moveNo()">NO 😜</button>
+</div>
+
+<script>
+  function nextPage(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page' + page).classList.add('active');
+  }
+
+  function moveNo() {
+    const btn = document.querySelector('.no');
+    btn.style.top = Math.random() * 400 + "px";
+    btn.style.left = Math.random() * 300 + "px";
+  }
+
+  function openVideo() {
+    window.location.href = "video.mp4"; // Your video with song
+  }
+</script>
+
+</body>
+</html>
