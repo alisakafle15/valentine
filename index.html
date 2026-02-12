@@ -10,7 +10,7 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom, #ffd6e0, #fff);
       text-align: center;
-      padding: 30px;
+      padding: 15px; /* smaller padding for mobile */
     }
 
     .page {
@@ -38,6 +38,8 @@
       border-radius: 25px;
       cursor: pointer;
       margin-top: 20px;
+      width: 80%;       /* buttons scale on small screens */
+      max-width: 300px;
     }
 
     .next {
@@ -57,19 +59,21 @@
     }
 
     img {
-      width: 180px;
+      max-width: 90%;    /* scale images on small screens */
+      height: auto;
       border-radius: 15px;
       margin: 8px;
     }
 
     .letter {
-      max-width: 700px;
+      max-width: 95%;    /* fit on small screens */
       margin: auto;
       text-align: left;
       background: #fff;
-      padding: 25px;
+      padding: 20px;     /* smaller padding for mobile */
       border-radius: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 16px;   /* slightly smaller text for mobile */
     }
 
     .letter img {
@@ -103,8 +107,7 @@
   <img src="img6.jpeg">
   <img src="img7.jpeg">
   <img src="img8.jpeg">
-<img src="img9.jpeg">
-
+  <img src="img9.jpeg">
 
   <br>
   <button class="next" onclick="nextPage(3)">Next ➡️</button>
@@ -176,4 +179,3 @@
 
 </body>
 </html>
-
